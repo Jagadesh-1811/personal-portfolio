@@ -366,6 +366,23 @@ body.dark .btn::after {
     color: var(--white);
 }
 
+.btn-white {
+    max-width: 18rem;
+    height: 4rem;
+    border-radius: .5rem;
+    border: 2px solid #fff;
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: #fff;
+}
+
+.btn-white:hover {
+    background: transparent;
+    color: #fff;
+}
+
 .cv {
     text-align: center;
     padding: .8rem 2rem .2rem 2rem;
@@ -1066,7 +1083,7 @@ body.dark #darkMode::after {
     display: inline-flex;
     justify-content: center;
     position: relative;
-    padding: 1rem 3rem;
+    padding: 1rem 3rem 1rem 4rem;
     background-color: transparent;
     color: #fff;
     text-decoration: none;
@@ -1077,6 +1094,7 @@ body.dark #darkMode::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .buttonDownload:hover {
@@ -1458,24 +1476,7 @@ section .row .col-skill h4 i {
     color: #000;
 }
 
-.about-btn-row .buttonDownload {
-    display: inline-block;
-    padding: 0.8rem 2.5rem;
-    border: 2px solid #fff;
-    color: #fff;
-    border-radius: 5rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: none;
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
 
-.about-btn-row .buttonDownload:hover {
-    background: var(--green);
-    border-color: var(--green);
-    color: #000;
-}
 
 .skill-seccion {
     margin-top: 4rem;
@@ -3249,3 +3250,124 @@ body.light .timeline::before {
 body.light .marquee-card h3 {
     color: var(--black);
 }
+
+/* Light mode overrides for About section in index and about.html */
+body.light section .row .columns {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light section .row .columns h4 {
+    color: var(--black);
+}
+body.light section .row .columns p {
+    color: #555;
+}
+body.light .about-info-card {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+body.light .about-info-value {
+    color: #444;
+}
+body.light .skill-category {
+    background: #fdfdfd;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light .skill-item {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+body.light .skill-item span {
+    color: var(--black);
+}
+body.light .sobre-mi-seccion {
+    background: #fff;
+    color: var(--black);
+}
+body.light .sobre-mi-info p {
+    color: #555;
+}
+body.light .skill-card {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+body.light .skill-card .skill-name {
+    color: var(--black);
+}
+body.light .skill-card .skill-info {
+    color: #666;
+}
+body.light .buttonDownload {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+body.light .buttonDownload:hover {
+    background-color: #000;
+    color: var(--green);
+    border-color: var(--green);
+}
+body.light .about-stat {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light .stat-label {
+    color: #555;
+}
+body.light section .row .columns .skill-category h4 i {
+    color: var(--secundario);
+}
+
+/* Light mode overrides for Services and Project cards */
+body.light .service-card {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+body.light .service-card h3 {
+    color: var(--black);
+}
+body.light .service-card p {
+    color: #666;
+}
+body.light .custom-slider-container .caja {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light .custom-slider-container .caja .content h3 {
+    color: var(--black);
+}
+body.light .custom-slider-container .caja .content p {
+    color: #666;
+}
+body.light .custom-slider-container .caja .content .tecnologias span {
+    color: #aaa;
+}
+body.light .project-card {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+body.light .project-card h3 {
+    color: var(--black);
+}
+body.light .project-card p {
+    color: #666;
+}
+body.light .custom-slide .caja {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light .btn-white {
+    border-color: var(--black);
+    color: var(--black);
+    background: transparent;
+}
+body.light .btn-white:hover {
+    background: var(--black);
+    color: #fff;
+}
+
