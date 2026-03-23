@@ -1,4 +1,16 @@
 /* Main JS */
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loading-pag');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('hide');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 800); // Wait for transition
+        }, 1200); // Let the animation play a bit before hiding
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
     /* Typed.js Init */
