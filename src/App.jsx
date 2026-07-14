@@ -295,7 +295,7 @@ function App() {
             <div className="hero-actions" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
               <a className="primary-button" href="#projects">View projects</a>
               <a className="ghost-button" href="#contact">Contact me</a>
-              <a className="ghost-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+              <a className="ghost-button" href="https://docs.google.com/document/d/1qH5WYb8MDmRvZUtRTtbn3SFgazAypqyMcWQn6rMV9EA/export?format=pdf">View Resume</a>
             </div>
           </div>
 
