@@ -545,21 +545,21 @@ function App() {
                 method="POST"
                 style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '32px', boxSizing: 'border-box', width: '100%', height: '100%' }}
               >
-                <input type="text" name="_honey" style={{ display: 'none' }} />
+                <input type="text" name="_honey" autoComplete="off" style={{ display: 'none' }} />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.href : ''} />
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left' }}>
                   <label htmlFor="name" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--primary, #810102)' }}>Name</label>
-                  <input type="text" id="name" name="name" required style={{ padding: '12px 16px', borderRadius: '12px', border: '1px solid rgba(129,1,2,0.2)', background: '#fff', fontSize: '16px', color: 'var(--text, #111)' }} placeholder="Your name" />
+                  <input type="text" id="name" name="name" autoComplete="name" required style={{ padding: '12px 16px', borderRadius: '12px', border: '1px solid rgba(129,1,2,0.2)', background: '#fff', fontSize: '16px', color: 'var(--text, #111)' }} placeholder="Your name" />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left' }}>
                   <label htmlFor="email" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--primary, #810102)' }}>Email</label>
-                  <input type="email" id="email" name="email" required style={{ padding: '12px 16px', borderRadius: '12px', border: '1px solid rgba(129,1,2,0.2)', background: '#fff', fontSize: '16px', color: 'var(--text, #111)' }} placeholder="you@example.com" />
+                  <input type="email" id="email" name="email" autoComplete="email" required style={{ padding: '12px 16px', borderRadius: '12px', border: '1px solid rgba(129,1,2,0.2)', background: '#fff', fontSize: '16px', color: 'var(--text, #111)' }} placeholder="you@example.com" />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left' }}>
                   <label htmlFor="message" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--primary, #810102)' }}>Message</label>
-                  <textarea id="message" name="message" rows="4" required style={{ padding: '12px 16px', borderRadius: '12px', border: '1px solid rgba(129,1,2,0.2)', background: '#fff', fontSize: '16px', color: 'var(--text, #111)', resize: 'vertical' }} placeholder="How can I help you?"></textarea>
+                  <textarea id="message" name="message" autoComplete="off" rows="4" required style={{ padding: '12px 16px', borderRadius: '12px', border: '1px solid rgba(129,1,2,0.2)', background: '#fff', fontSize: '16px', color: 'var(--text, #111)', resize: 'vertical' }} placeholder="How can I help you?"></textarea>
                 </div>
                 <button type="submit" className="primary-button" style={{ marginTop: '16px', width: '100%', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                   Send Message
