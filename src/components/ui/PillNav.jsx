@@ -5,7 +5,6 @@ const PillNav = ({
   logo,
   logoAlt = 'Logo',
   items,
-  activeHref,
   className = '',
   ease = 'power3.easeOut',
   baseColor = '#fff',
@@ -248,7 +247,6 @@ const PillNav = ({
             style={{ gap: 'var(--pill-gap)', padding: 3 }}
           >
             {items.map((item, i) => {
-              const isActive = activeHref === item.href;
               const pillStyle = {
                 background: 'var(--pill-bg, #fff)',
                 color: 'var(--pill-text, var(--base, #000))',

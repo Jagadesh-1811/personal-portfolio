@@ -66,7 +66,7 @@ const ScrollStack = ({
   const offsetsRef = useRef(new Map());
 
   const measureOffsets = useCallback(() => {
-    const { containerHeight } = getScrollData();
+    getScrollData();
     const endElement = useWindowScroll
       ? document.querySelector('.scroll-stack-end')
       : scrollerRef.current?.querySelector('.scroll-stack-end');
@@ -349,7 +349,7 @@ const ScrollStack = ({
 
   return (
     <div className={containerClassName} ref={scrollerRef} style={containerStyles}>
-      <div className="scroll-stack-inner pt-[10vh] px-20 pb-[25rem] min-h-[50vh]">
+      <div className="scroll-stack-inner pt-[10vh] px-20 pb-100 min-h-[50vh]">
         {children}
         <div className="scroll-stack-end w-full h-px" />
       </div>

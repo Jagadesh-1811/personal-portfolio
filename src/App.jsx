@@ -484,7 +484,7 @@ function App() {
           </div>
           <div style={{ maxWidth: '850px', margin: '0 auto' }}>
             <ScrollStack useWindowScroll={true} itemDistance={80} itemScale={0.03} baseScale={0.9} blurAmount={0}>
-              {projects.map((project, index) => (
+              {projects.map((project) => (
                 <ScrollStackItem key={project.title} itemClassName="project-card">
                   <GlareHover style={{ backgroundColor: 'var(--surface-soft)', border: '1px solid rgba(255, 255, 255, 0.5)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between', padding: '40px', boxSizing: 'border-box', borderRadius: '32px' }} borderRadius="32px" glareColor="#ffffff" glareOpacity={0.4}>
                     <div>
