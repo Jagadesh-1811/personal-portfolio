@@ -116,25 +116,46 @@ const toolkit = [
 
 const projects = [
   {
-    title: 'ByteHouse Community Portal',
-    role: 'Co-Founder & Lead Dev',
-    description: 'A platform built for developer momentum. Facilitates project tracking, real-time activity feeds, and cross-team collaboration for our local builder community.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    stats: { primary: '500+ Builders', secondary: '120+ Projects Shipped' }
+    title: 'IT Asset Tracker & Automated Onboarding System',
+    role: 'Full Stack Developer Intern | Farview Global | May 2026',
+    description: 'Developed an automated HR-to-IT bridge for zero-touch employee onboarding and physical asset management. Built a background email poller with heuristic parsing via Microsoft Graph API, and implemented AES-256-GCM field-level encryption for sensitive data.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'MS Graph API'],
+    stats: { primary: 'Zero-Touch Onboarding', secondary: 'AES-256 Encrypted' },
+    links: [
+      { text: 'Project Doc', url: 'https://docs.google.com/document/d/1ymXJs_8dhFmdHTCgnha33ooEqulPIy7a/edit?usp=sharing&ouid=107890555383325800599&rtpof=true&sd=true' }
+    ]
   },
   {
-    title: 'Vyomarr AI Platform',
-    role: 'Co-Founder & Product Engineer',
-    description: 'An AI developer tool integrating multi-agent orchestrations, customizable LLM agent configurations, and playground logs to experiment with local model testing.',
-    tech: ['Next.js', 'FastAPI', 'Supabase', 'Claude Code'],
-    stats: { primary: '12 Agents Configured', secondary: 'Instant Local Logging' }
+    title: 'AI Resume Builder',
+    role: 'Vibe Coding Intern | TEN Company Internship | Mar 2026',
+    description: 'Architected an AI-powered resume builder with NLP-based content enhancement and intelligent suggestions via Gemini API. Designed full-stack architecture using FastAPI and Supabase, achieving 90% content optimization efficiency.',
+    tech: ['HTML', 'CSS', 'FastAPI', 'Gemini API', 'Supabase'],
+    stats: { primary: '90% Efficiency', secondary: 'Production Ready' },
+    links: [
+      { text: 'GitHub', url: 'https://github.com/Jagadesh-1811/Ai-resume-bulider' },
+      { text: 'Live', url: 'https://ai-resume-bulider-cexr.vercel.app' }
+    ]
   },
   {
-    title: 'Stitch-Powered Dashboard UX',
-    role: 'Product Engineer',
-    description: 'A high-performance administration dashboard with responsive grids, interactive telemetry tables, and integrated MSAL/OAuth authentication flows.',
-    tech: ['React', 'Google Stitch', 'Bootstrap', 'Vercel'],
-    stats: { primary: '< 80ms Latency', secondary: '100% Mobile Responsive' }
+    title: 'Vyomarr - Space, Mysteries & Future Science',
+    role: 'Co-Founder & AI Developer | Mar 2026',
+    description: 'Co-founded a space and science blog exploring astrophysics, aerospace, quantum physics, and cosmic "What If" scenarios for a general audience. Built and maintained the website end-to-end, handling content publishing, design, and technical setup. Managed content strategy and SEO (structured metadata, social sharing tags) to grow readership and discoverability.',
+    tech: ['MERN Stack', 'Claude Code', 'LLM APIs'],
+    stats: { primary: '40+ Active Users', secondary: 'Live Platform' },
+    links: [
+      { text: 'Live', url: 'https://vyomarr.space' }
+    ]
+  },
+  {
+    title: 'PhishGuard AI - Forensic Phishing Intelligence',
+    role: 'Vijesha IT Services Cybersecurity Internship | 2026',
+    description: 'Built a local-first phishing detection suite using Ollama (gpt-oss model) for email forensic analysis without cloud data transmission. Engineered encrypted Gmail integration with auto-monitoring and weighted risk scoring (0-100) for enhanced email security.',
+    tech: ['Node.js', 'React', 'TypeScript', 'Ollama', 'IMAP', 'SMTP'],
+    stats: { primary: 'Local-first AI', secondary: 'Encrypted Integrations' },
+    links: [
+      { text: 'GitHub', url: 'https://github.com/Jagadesh-1811/PhishGuard--AI' },
+      { text: 'Live', url: 'https://phish-guard-ai-bay.vercel.app' }
+    ]
   }
 ];
 
@@ -170,7 +191,7 @@ const education = [
 
 const hackathons = [
   {
-    name: "Siddharth HackFest 2K26 (Top 4 / 350+ Teams)",
+    name: "Siddharth HackFest 2K26 (Top 4 / 350+ Teams) - Team Leader",
     date: "Feb 2026",
     project: "CodeMap Neural Engine",
     description: "Led team to the top 4 nationally; built an AI VS Code extension to analyze codebases and generate interactive architecture diagrams. Integrated Gemini API for real-time summaries and file categorization, enhancing code comprehension by 85%.",
@@ -181,7 +202,7 @@ const hackathons = [
     ]
   },
   {
-    name: "Google Build a Solution 2026 (Top 106 Nationally)",
+    name: "Google Build a Solution 2026 (Top 106 Nationally) - Team Leader",
     date: "May 2026",
     project: "CommunityPulse",
     description: "Architected a multi-channel disaster response platform with real-time reporting via text, voice (WebRTC), and Telegram. Designed a dual-portal system with live geospatial tracking and Firebase RTDB coordination, improving emergency response efficiency.",
@@ -189,6 +210,17 @@ const hackathons = [
     links: [
       { text: "GitHub", url: "https://github.com/Jagadesh-1811/community-pluse" },
       { text: "Live", url: "https://commuintypluse.web.app" }
+    ]
+  },
+  {
+    name: "CodeQuest 2026 National Gen AI Hackathon (Top 108 / 2,100+ Applicants) - Solo",
+    date: "Apr 2026",
+    project: "ZK-Security Scanner",
+    description: "Selected for national offline finals in Hyderabad; built a zero-knowledge AI security scanning platform with real-time threat assessment. Integrated Gemini AI for automated security reports and infrastructure risk evaluation, achieving 90% accuracy for non-technical users.",
+    stack: "FastAPI, Gemini API, REST APIs",
+    links: [
+      { text: "GitHub", url: "https://github.com/Jagadesh-1811/zero-knowledge-security-scanner" },
+      { text: "Live", url: "https://zero-knowledge-security-scanner-hng.vercel.app" }
     ]
   }
 ];
@@ -445,16 +477,16 @@ function App() {
           </div>
         </section>
 
-        <section className="projects-scroll-section" id="projects" style={{ width: '100%', padding: '86px 60px', borderBottom: '2px solid rgba(129, 1, 2, 0.18)', boxSizing: 'border-box' }}>
+        <section className="projects-scroll-section" id="projects" style={{ width: '100%', padding: '40px 60px', borderBottom: '2px solid rgba(129, 1, 2, 0.18)', boxSizing: 'border-box' }}>
           <div className="section-heading" style={{ display: 'flex', alignItems: 'baseline', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}>
             <p className="eyebrow" style={{ margin: 0 }}>Featured work.</p>
             <h2 style={{ margin: 0 }}>Selected projects.</h2>
           </div>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ maxWidth: '850px', margin: '0 auto' }}>
             <ScrollStack useWindowScroll={true} itemDistance={80} itemScale={0.03} baseScale={0.9} blurAmount={0}>
               {projects.map((project, index) => (
                 <ScrollStackItem key={project.title} itemClassName="project-card">
-                  <GlareHover style={{ backgroundColor: 'var(--surface-soft)', border: '1px solid rgba(255, 255, 255, 0.5)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between', padding: '36px', boxSizing: 'border-box', borderRadius: '32px' }} borderRadius="32px" glareColor="#ffffff" glareOpacity={0.4}>
+                  <GlareHover style={{ backgroundColor: 'var(--surface-soft)', border: '1px solid rgba(255, 255, 255, 0.5)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between', padding: '40px', boxSizing: 'border-box', borderRadius: '32px' }} borderRadius="32px" glareColor="#ffffff" glareOpacity={0.4}>
                     <div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
                         <h3 style={{ margin: 0, fontSize: 'clamp(20px, 4.5vw, 24px)', fontWeight: 800, color: 'var(--primary)' }}>{project.title}</h3>
@@ -473,14 +505,27 @@ function App() {
                         ))}
                       </div>
                       <div style={{ display: 'flex', gap: '24px', borderTop: '1px solid rgba(129,1,2,0.08)', paddingTop: '16px' }}>
-                        <div>
-                          <div style={{ fontSize: '10px', textTransform: 'uppercase', fontFamily: 'var(--mono)', color: 'var(--muted)', marginBottom: '4px' }}>Impact</div>
-                          <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--primary)' }}>{project.stats.primary}</div>
-                        </div>
-                        <div>
-                          <div style={{ fontSize: '10px', textTransform: 'uppercase', fontFamily: 'var(--mono)', color: 'var(--muted)', marginBottom: '4px' }}>Status</div>
-                          <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text)' }}>{project.stats.secondary}</div>
-                        </div>
+                        {project.stats && (
+                          <>
+                            <div>
+                              <div style={{ fontSize: '10px', textTransform: 'uppercase', fontFamily: 'var(--mono)', color: 'var(--muted)', marginBottom: '4px' }}>Impact</div>
+                              <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--primary)' }}>{project.stats.primary}</div>
+                            </div>
+                            <div>
+                              <div style={{ fontSize: '10px', textTransform: 'uppercase', fontFamily: 'var(--mono)', color: 'var(--muted)', marginBottom: '4px' }}>Status</div>
+                              <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text)' }}>{project.stats.secondary}</div>
+                            </div>
+                          </>
+                        )}
+                        {project.links && (
+                          <div style={{ display: 'flex', gap: '16px', marginLeft: 'auto', alignItems: 'center' }}>
+                            {project.links.map(link => (
+                              <a key={link.text} href={link.url} target="_blank" rel="noreferrer" style={{ fontSize: '12px', color: 'var(--primary)', textDecoration: 'underline', fontWeight: 700, fontFamily: 'var(--mono)', letterSpacing: '0.05em' }}>
+                                {link.text} ↗
+                              </a>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </GlareHover>
@@ -569,9 +614,14 @@ function App() {
           <p style={{ margin: 0, fontSize: '15px', color: 'var(--primary, #810102)', fontWeight: 600 }}>
             &copy; {new Date().getFullYear()} Jagadeeshwar CV. All rights reserved. <br /> <DecryptedText text="Designed by Jagadeeshwar CV" animateOn="view" />
           </p>
-          <a href="mailto:jagadeshwar2014@gmail.com" style={{ fontSize: '16px', color: 'var(--primary, #810102)', textDecoration: 'underline', fontWeight: 800 }}>
-            <DecryptedText text="jagadeshwar2014@gmail.com" animateOn="view" />
-          </a>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
+            <a href="mailto:jagadeshwar2014@gmail.com" style={{ fontSize: '16px', color: 'var(--primary, #810102)', textDecoration: 'underline', fontWeight: 800 }}>
+              <DecryptedText text="jagadeshwar2014@gmail.com" animateOn="view" />
+            </a>
+            <a href="tel:+918919548737" style={{ fontSize: '16px', color: 'var(--primary, #810102)', textDecoration: 'underline', fontWeight: 800 }}>
+              <DecryptedText text="+91 89195 48737" animateOn="view" />
+            </a>
+          </div>
         </div>
       </footer>
     </>

@@ -3,7 +3,7 @@ import Lenis from 'lenis';
 
 export const ScrollStackItem = ({ children, itemClassName = '' }) => (
   <div
-    className={`scroll-stack-card relative w-full h-[400px] my-8 p-0 rounded-[32px] box-border origin-top will-change-transform ${itemClassName}`.trim()}
+    className={`scroll-stack-card relative w-full h-[550px] my-8 p-0 rounded-[32px] box-border origin-top will-change-transform ${itemClassName}`.trim()}
   >
     {children}
   </div>
@@ -349,7 +349,7 @@ const ScrollStack = ({
 
   return (
     <div className={containerClassName} ref={scrollerRef} style={containerStyles}>
-      <div className="scroll-stack-inner pt-[20vh] px-20 pb-[50rem] min-h-screen">
+      <div className="scroll-stack-inner pt-[10vh] px-20 pb-[25rem] min-h-[50vh]">
         {children}
         <div className="scroll-stack-end w-full h-px" />
       </div>
