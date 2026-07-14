@@ -232,6 +232,10 @@ a {
   backdrop-filter: blur(16px) !important;
 }
 
+.project-glare-hover {
+  padding: 40px;
+}
+
 .pillars-section,
 .modules-section,
 .contact-section {
@@ -431,7 +435,7 @@ a {
   }
 
   .pillar-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .pillar-card {
@@ -457,7 +461,9 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: clamp(42px, 14vw, 64px);
+    font-size: clamp(32px, 10vw, 48px);
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .hero-visual {
@@ -476,9 +482,11 @@ a {
   .friction-section,
   .pillars-section,
   .modules-section,
-  .contact-section {
+  .contact-section,
+  .experience-education-section,
+  .projects-scroll-section {
     width: 100%;
-    padding: 62px 24px;
+    padding: 62px 24px !important;
     box-sizing: border-box;
   }
 
@@ -500,6 +508,10 @@ a {
 
   .module-row small {
     display: none;
+  }
+  
+  .project-glare-hover {
+    padding: 24px;
   }
 }
 
@@ -715,4 +727,15 @@ a {
 .icons a:hover .text {
     bottom: -35px;
     opacity: 1;
+}
+
+/* Keep text visible on mobile since there is no hover */
+@media (max-width: 768px) {
+    .icons {
+        margin: 4rem 0;
+    }
+    .icons a .text {
+        bottom: -35px;
+        opacity: 1;
+    }
 }

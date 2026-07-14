@@ -237,9 +237,9 @@ const navItems = [
 ];
 
 const socialItems = [
-  { label: 'LinkedIn', link: 'https://linkedin.com/', icon: <FaLinkedin size={18} /> },
-  { label: 'GitHub', link: 'https://github.com/', icon: <FaGithub size={18} /> },
-  { label: 'Email', link: 'mailto:jagadeeshwar@example.com', icon: <FaEnvelope size={18} /> },
+  { label: 'LinkedIn', link: 'https://linkedin.com/in/jagadeeshwarcv', icon: <FaLinkedin size={18} /> },
+  { label: 'GitHub', link: 'https://github.com/Jagadesh-1811', icon: <FaGithub size={18} /> },
+  { label: 'Email', link: 'mailto:jagadeshwar2014@gmail.com', icon: <FaEnvelope size={18} /> },
 ];
 
 function App() {
@@ -486,13 +486,13 @@ function App() {
             <ScrollStack useWindowScroll={true} itemDistance={80} itemScale={0.03} baseScale={0.9} blurAmount={0}>
               {projects.map((project) => (
                 <ScrollStackItem key={project.title} itemClassName="project-card">
-                  <GlareHover style={{ backgroundColor: 'var(--surface-soft)', border: '1px solid rgba(255, 255, 255, 0.5)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between', padding: '40px', boxSizing: 'border-box', borderRadius: '32px' }} borderRadius="32px" glareColor="#ffffff" glareOpacity={0.4}>
+                  <GlareHover className="project-glare-hover" style={{ backgroundColor: 'var(--surface-soft)', border: '1px solid rgba(255, 255, 255, 0.5)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between', boxSizing: 'border-box', borderRadius: '32px' }} borderRadius="32px" glareColor="#ffffff" glareOpacity={0.4}>
                     <div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
                         <h3 style={{ margin: 0, fontSize: 'clamp(20px, 4.5vw, 24px)', fontWeight: 800, color: 'var(--primary)' }}>{project.title}</h3>
                         <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--accent)' }}>{project.role}</span>
                       </div>
-                      <p style={{ margin: '0 0 24px 0', fontSize: '15px', color: 'var(--text)', lineHeight: 1.5 }}>
+                      <p style={{ margin: '0 0 16px 0', fontSize: '14px', color: 'var(--text)', lineHeight: 1.5 }}>
                         {project.description}
                       </p>
                     </div>
@@ -573,7 +573,7 @@ function App() {
               </h3>
 
               <div className="icons" style={{ margin: '0', display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <a href="mailto:jagadeeshwar@example.com" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
+                <a href="mailto:jagadeshwar2014@gmail.com" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
                   <div className="layer">
                     <span></span>
                     <span></span>
@@ -583,7 +583,7 @@ function App() {
                   </div>
                   <div className="text" style={{ color: 'var(--text)' }}>Gmail</div>
                 </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
+                <a href="https://linkedin.com/in/jagadeeshwarcv" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
                   <div className="layer">
                     <span></span>
                     <span></span>
@@ -593,7 +593,7 @@ function App() {
                   </div>
                   <div className="text" style={{ color: 'var(--text)' }}>LinkedIn</div>
                 </a>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
+                <a href="https://github.com/Jagadesh-1811" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
                   <div className="layer">
                     <span></span>
                     <span></span>
