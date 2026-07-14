@@ -734,8 +734,4 @@ a {
     .icons {
         margin: 4rem 0;
     }
-    .icons a .text {
-        bottom: -35px;
-        opacity: 1;
-    }
 }

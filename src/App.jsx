@@ -11,6 +11,7 @@ import { VscAzure } from 'react-icons/vsc';
 import { motion } from 'motion/react';
 import GlareHover from '@/components/ui/GlareHover';
 import DecryptedText from './components/ui/DecryptedText';
+import { useState } from 'react';
 
 const pillars = [
 
@@ -185,7 +186,7 @@ const education = [
     degree: "B.Tech",
     institution: "Annamacharya Institute of Technology & Sciences, Rajampeta",
     period: "2023 - 2027",
-    description: "Focus on software engineering, data structures, and full-stack web development."
+    description: "Focus on software engineering and full-stack web development."
   }
 ];
 
@@ -243,6 +244,42 @@ const socialItems = [
 ];
 
 function App() {
+  const [formStatus, setFormStatus] = useState({ state: 'idle', message: '' });
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus({ state: 'submitting', message: 'Sending...' });
+    
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        setFormStatus({ state: 'success', message: 'Message sent successfully!' });
+        e.target.reset();
+      } else {
+        setFormStatus({ state: 'error', message: result.error || 'Failed to send message.' });
+      }
+    } catch (error) {
+      setFormStatus({ state: 'error', message: 'Could not connect to the server. Make sure it is running.' });
+    }
+    
+    setTimeout(() => {
+      setFormStatus(prev => prev.state === 'submitting' ? prev : { state: 'idle', message: '' });
+    }, 5000);
+  };
+
   return (
     <>
       <main className="portfolio-site">
@@ -541,8 +578,8 @@ function App() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '64px', justifyContent: 'center', alignItems: 'center' }}>
             <GlareHover className="glass-card" style={{ flex: '1 1 400px', maxWidth: '600px', width: '100%', margin: '0', borderRadius: '24px' }} borderRadius="24px" glareColor="#ffffff" glareOpacity={0.4}>
               <form
-                action="https://formsubmit.co/jagadeshwar2014@gmail.com"
-                method="POST"
+                id="contact-form"
+                onSubmit={handleFormSubmit}
                 style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '32px', boxSizing: 'border-box', width: '100%', height: '100%' }}
               >
                 <input type="text" name="_honey" autoComplete="off" style={{ display: 'none' }} />
@@ -561,9 +598,23 @@ function App() {
                   <label htmlFor="message" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--primary, #810102)' }}>Message</label>
                   <textarea id="message" name="message" autoComplete="off" rows="4" required style={{ padding: '12px 16px', borderRadius: '12px', border: '1px solid rgba(129,1,2,0.2)', background: '#fff', fontSize: '16px', color: 'var(--text, #111)', resize: 'vertical' }} placeholder="How can I help you?"></textarea>
                 </div>
-                <button type="submit" className="primary-button" style={{ marginTop: '16px', width: '100%', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
-                  Send Message
+                <button type="submit" className="primary-button" disabled={formStatus.state === 'submitting'} style={{ marginTop: '16px', width: '100%', border: 'none', cursor: formStatus.state === 'submitting' ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: formStatus.state === 'submitting' ? 0.7 : 1 }}>
+                  {formStatus.state === 'submitting' ? 'Sending...' : 'Send Message'}
                 </button>
+                {formStatus.state !== 'idle' && formStatus.state !== 'submitting' && (
+                  <div style={{
+                    marginTop: '8px', 
+                    padding: '12px', 
+                    borderRadius: '8px', 
+                    fontSize: '14px', 
+                    fontWeight: 600,
+                    textAlign: 'center',
+                    background: formStatus.state === 'success' ? '#e6f4ea' : '#fce8e6',
+                    color: formStatus.state === 'success' ? '#137333' : '#c5221f'
+                  }}>
+                    {formStatus.message}
+                  </div>
+                )}
               </form>
             </GlareHover>
 
@@ -581,7 +632,7 @@ function App() {
                     <span></span>
                     <span className="fab"><FaEnvelope size={18} /></span>
                   </div>
-                  <div className="text" style={{ color: 'var(--text)' }}>Gmail</div>
+                  <div className="text">Gmail</div>
                 </a>
                 <a href="https://linkedin.com/in/jagadeeshwarcv" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
                   <div className="layer">
@@ -591,7 +642,7 @@ function App() {
                     <span></span>
                     <span className="fab"><FaLinkedin size={18} /></span>
                   </div>
-                  <div className="text" style={{ color: 'var(--text)' }}>LinkedIn</div>
+                  <div className="text">LinkedIn</div>
                 </a>
                 <a href="https://github.com/Jagadesh-1811" target="_blank" rel="noopener noreferrer" style={{ margin: '2rem 1.5rem' }}>
                   <div className="layer">
@@ -601,7 +652,7 @@ function App() {
                     <span></span>
                     <span className="fab"><FaGithub size={18} /></span>
                   </div>
-                  <div className="text" style={{ color: 'var(--text)' }}>GitHub</div>
+                  <div className="text">GitHub</div>
                 </a>
               </div>
             </div>
